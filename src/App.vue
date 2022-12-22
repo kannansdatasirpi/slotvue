@@ -1,15 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="form-help">
+    <form-helper>
+      <template v-slot:form-header>
+        <h3>This is the title of the form</h3>
+        <p>Information about the form</p>
+      </template> 
+      <template v-slot:form-fields>
+        <input type="text" placeholder="name" required />
+        <input type="password" placeholder="password" required />
+      </template> 
+      <template v-slot:form-controls>
+        <button @click="handleSubmit">Submit</button>
+      </template>
+    </form-helper>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import formHelper from './components/formHelper.vue'
 
 export default {
-  name: 'App',
+  
   components: {
-    HelloWorld
+    'form-helper': formHelper
+  },
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+
   }
 }
 </script>
