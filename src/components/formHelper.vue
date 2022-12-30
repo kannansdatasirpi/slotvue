@@ -1,5 +1,7 @@
+<!--compose your components in a way other than the strict parent-child relationship. Slots give you an outlet to place content in new places or make components more generic.-->
+
 <template>
-  <div>
+  <div id="form-help">
     <h1>Please fill out our form</h1>
     <form>
       <div id="form-header">
